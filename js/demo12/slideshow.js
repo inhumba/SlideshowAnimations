@@ -101,6 +101,7 @@ export class Slideshow {
 		.timeline({
 			defaults: {
 				duration: 1.2,
+				// duration: 1.4,
 			},
 			onStart: () => {
 				// Add class to the upcoming slide to mark it as current
@@ -124,7 +125,8 @@ export class Slideshow {
 			duration: 0.4,
 			ease: 'power2.in',
 			xPercent: direction*75,
-			rotation: -direction*6
+			// rotation: -direction*6
+			rotation: 0
 		}, 'start')
 		.fromTo(this.DOM.deco, {
 			xPercent: direction*100,
@@ -151,7 +153,8 @@ export class Slideshow {
 		}, 'middle')
 		.fromTo(upcomingInner, {
 			xPercent: -direction*75,
-			rotation: direction*6
+			// rotation: direction*6
+			rotation: 0
 		}, {
 			ease: 'power4',
 			xPercent: 0,
